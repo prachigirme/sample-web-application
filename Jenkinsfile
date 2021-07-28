@@ -57,11 +57,11 @@ pipeline{
 				    ansiblePlaybook become: true, installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 				}
 			}
-		}*/
+		}
 		
 	
 		
-}
+}*/
 	       
 	       
 	       
