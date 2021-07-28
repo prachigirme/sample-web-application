@@ -38,9 +38,9 @@ pipeline{
                   script{
 		 sh 'cp -r ../cicd_endtoend@2/target .'
                    sh 'docker build . -t prachi11/devopsproject:$Docker_tag'
-		   withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
+		   withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
 				    
-				  sh 'docker login -u prachi11 -p $docker_password'
+				  sh 'docker login -u prachi11 -p $dockerhub'
 				  sh 'docker push prachi11/devopsproject:$Docker_tag'
 			}
                        }
