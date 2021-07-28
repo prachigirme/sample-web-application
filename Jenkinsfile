@@ -28,7 +28,7 @@ pipeline{
 		    sh "mvn clean install"
                   }
                 }  
-              }
+              
 
 
 
@@ -46,6 +46,7 @@ pipeline{
                        }
                     }
                  }
+	}
 		 
 /*		stage('ansible playbook'){
 			steps{
