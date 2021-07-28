@@ -32,22 +32,22 @@ pipeline{
 
 
 
-            /*  stage('build')
+              stage('Docker build')
                 {
               steps{
                   script{
-		 sh 'cp -r ../devops-training@2/target .'
-                   sh 'docker build . -t deekshithsn/devops-training:$Docker_tag'
+		 sh 'cp -r ../prachi11/target .'
+                   sh 'docker build . -t prachi11/devopsproject:$Docker_tag'
 		   withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
 				    
-				  sh 'docker login -u deekshithsn -p $docker_password'
-				  sh 'docker push deekshithsn/devops-training:$Docker_tag'
+				  sh 'docker login -u prachi11 -p $docker_password'
+				  sh 'docker push prachi11/devopsproject:$Docker_tag'
 			}
                        }
                     }
                  }
 		 
-		stage('ansible playbook'){
+/*		stage('ansible playbook'){
 			steps{
 			 	script{
 				    sh '''final_tag=$(echo $Docker_tag | tr -d ' ')
