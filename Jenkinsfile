@@ -36,7 +36,7 @@ pipeline{
                 {
               steps{
                   script{
-		 sh 'cp -r ../prachi11/target .'
+		 sh 'cp -r ../cicd_endtoend@2/target .'
                    sh 'docker build . -t prachi11/devopsproject:$Docker_tag'
 		   withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
 				    
