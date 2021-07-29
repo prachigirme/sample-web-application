@@ -55,7 +55,7 @@ pipeline{
 				     echo ${final_tag}test
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
-				    ansiblePlaybook installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yaml'
+				    ansiblePlaybook credentialsId: 'f88bb229-6132-4a3f-9141-68ee59b33cae', installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 				}
 			}
 		}
